@@ -5,7 +5,9 @@ pipeline {
   agent any
   stages {
     stage('Clone from git') {
+        steps{
         git url: 'https://github.com/vinodgowda1477/flask-pipeline.git'
+    }
     }
     stage('Building image') {
       steps{
