@@ -1,0 +1,9 @@
+---
+- name: create s3 bucket with versioning enabled
+  s3_bucket:
+    aws_access_key: "{{ AWS_ACCESS_KEY }}"
+    aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
+    name: "{{ bucket_name }}"
+    versioning: yes
+    state: present
+

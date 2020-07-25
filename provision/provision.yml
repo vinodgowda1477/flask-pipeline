@@ -1,0 +1,19 @@
+- name: Provsion machine to deploy flask s3 app
+  hosts: local
+  gather_facts: no
+  become: yes
+
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+  pre_tasks:
+    - name: Install python for Ansible
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python3)
+      changed_when: False
+    - setup: # aka gather_facts
+
+  tasks:
+    - include: tasks/install_prerequisites.yml
+    - include: tasks/create_bucket.yml
+    - include: tasks/install_newrelic.yml
+

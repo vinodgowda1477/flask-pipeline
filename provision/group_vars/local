@@ -1,0 +1,5 @@
+bucket_name: "bucket name to be created"
+AWS_ACCESS_KEY: "aws access key here"
+AWS_SECRET_ACCESS_KEY: "aws secret key here"
+os_codename: "os code for apt repo"
+newrelic_license_key: "license key here"
