@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tekion-s3-upload</title>
+  </head>
+
+  <body>
+   <div>
+     <h3>These are your uploaded files:</h3>
+     <table style="width:30%" border="1">
+       <tr>
+         <th>File urls</th>
+      </tr>
+      {% for item in contents %}
+      <tr>
+        <td><a href="{{item}}">{{item}}</a></td>
+      </tr>
+      {% endfor %}
+     </table>
+       <ul>
+         <li>
+             <a href="home"> Home page </a>
+         </li>
+       </ul>
+   </div>
+  </body>
+</html>
